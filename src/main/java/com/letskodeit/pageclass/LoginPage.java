@@ -20,7 +20,7 @@ public class LoginPage {
         driver.findElement(By.xpath(LOGIN_LINK)).click();
     }
 
-    public void signInWith(String email, String password){
+    public NavigationPage signInWith(String email, String password){
 
         WebElement emailElement = driver.findElement(By.id(EMAIL_FIELD));
         emailElement.clear();
@@ -31,10 +31,11 @@ public class LoginPage {
         WebElement logButton = driver.findElement(By.xpath(LOGIN_BUTTON_LINK));
         logButton.click();
 
+        return new NavigationPage(driver);
 
     }
 
-    public void 
+
 
 
 }
